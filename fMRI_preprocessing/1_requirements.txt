@@ -1,0 +1,9 @@
+antspyx
+antspynet
+scipy
+numpy
+nitransforms==24.1.1
+pandas
+nilearn
+python-dotenv
+niworkflows
