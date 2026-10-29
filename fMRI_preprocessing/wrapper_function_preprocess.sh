@@ -56,7 +56,7 @@ RESTART_FROM_STEP=0
 
 
 # ----- Directory and subjects -----
-DIR="/path/to/BIDS/folder/"   # trailing slash required
+DIR="/path/to/BIDS/folder/"  
 SUBS=(
     'sub-01'
     'sub-02'
@@ -84,7 +84,8 @@ TSNR_JOBS=2                 # how many tSNR maps to compute at once (step 11); l
 # ====================================================================================================
 
 
-# --- Environment --- (need to set up first time running)
+# --- Environment ---
+DIR="${DIR%/}/"          # make sure DIR ends with exactly one slash
 export DIR
 sDIR="$(dirname $(realpath $0))/preprocess/"
 
